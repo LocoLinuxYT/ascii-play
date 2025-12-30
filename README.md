@@ -16,18 +16,33 @@ sudo apt update
 sudo apt install -y mpv caca-utils ffmpeg chafa jp2a
 ```
 
-Other OS:
-- macOS (Homebrew):
+Arch/Manjaro (pacman):
+
+```bash
+sudo pacman -Syu mpv libcaca ffmpeg chafa jp2a
+```
+
+Fedora/RHEL/CentOS (dnf):
+
+```bash
+sudo dnf install -y mpv libcaca ffmpeg chafa jp2a
+```
+
+macOS (Homebrew):
+
+```bash
+brew install mpv libcaca ffmpeg chafa jp2a
+```
+
+Windows (choose one):
+- **WSL (recommended)** — install Ubuntu/Debian from the Store, then use the Debian/Ubuntu commands (`sudo apt install ...`). Run the script inside the WSL shell.
+- **MSYS2 (native Windows terminal)** — open the MSYS2 `MINGW64` shell and install:
   ```bash
-  brew install mpv libcaca ffmpeg chafa jp2a
+  pacman -Syu mpv ffmpeg chafa jp2a libcaca
   ```
-- Windows:
-  - WSL (Ubuntu/Debian): same as above (`apt install ...`)
-  - MSYS2:
-    ```bash
-    pacman -S mpv ffmpeg chafa jp2a libcaca
-    ```
-- Other Linux/BSD: install the same tool names via your package manager (or build from source if unavailable).
+  Then run `./ascii_play.sh ...` from that same MSYS2 shell. (Git Bash/PowerShell alone won’t work because the script expects a full bash + Unix toolchain.)
+
+Other Linux/BSD: install the same tool names via your package manager; if a package is missing, build it from source or switch to a supported combo.
 
 Run commands are the same on all OSes once dependencies are installed:
 
