@@ -1,0 +1,12 @@
+# Ignore local media artifacts
+*.mp4
+*.mkv
+*.mov
+*.avi
+*.webm
+*.m4v
+*.mpg
+*.mpeg
+*.ts
+*.flv
+*.wmv
